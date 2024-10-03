@@ -1,5 +1,32 @@
 # Livrable
 
+## Consigne 
+https://www.figma.com/deck/7c0aFzSlq14nO5Lt63DioP/M4D24-%2F%2F-DEVDAYS?node-id=1-25&node-type=canvas&viewport=25%2C647%2C0.07&t=n7cUTjuPAcTQsfZJ-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1
+
+## Context
+Projet réalisation d'une appliation web responsive pour la gestion d'un festival. 
+On devra trouver un theme, développé une partie front end et avoir une solution avec des rest api pour la partie backend.
+On doit égalment créer une maquette avec une identité visueul en adéquation avec le thème du festival.
+
+## Fonctionnalité attendu
+### Disposer d'une liste d'évènement
+### Possibilité aux utilisateurx de lister les évenements
+### Voir les détails d'un evenement
+- Décrit une activé ou le concert d'un artiste avec une heure
+### Carte interactive
+Avoir une carte pour indiqué le lieu du festival
+
+### Attente de l'API
+- CRUD sur le évènement
+  
+
+## Groupe
+- Maxence B
+- Louis
+- Alexis
+- Houda
+  
+
 ## Choix et thématique
 
 Musique : techno
@@ -75,6 +102,88 @@ Que vous soyez végétarien, végan ou simplement curieux d’essayer une altern
 
 #### light show pirotechnique
  
+
+## Schéma et base de données 
+ Untitled Diagram documentation
+## Summary
+
+- [Introduction](#introduction)
+- [Database Type](#database-type)
+- [Table Structure](#table-structure)
+	- [User](#User)
+	- [events](#events)
+- [Relationships](#relationships)
+- [Database Diagram](#database-Diagram)
+
+## Introduction
+
+## Database type
+
+- **Database system:** MariaDB
+## Table structure
+
+### User
+
+| Name        | Type          | Settings                      | References                    | Note                           |
+|-------------|---------------|-------------------------------|-------------------------------|--------------------------------|
+| **id** | INTEGER | 🔑 PK, not null , unique, autoincrement |  | |
+| **first_name** | VARCHAR(255) | not null  |  | |
+| **last_name** | VARCHAR(255) | not null  |  | |
+| **birth_date** | DATE | not null  |  | |
+| **ROLES** | SMALLINT | not null  |  | | 
+
+
+#### Indexes
+| Name | Unique | Fields |
+|------|--------|--------|
+| User_index_0 |  |  |
+| User_index_1 |  |  |
+### events
+
+| Name        | Type          | Settings                      | References                    | Note                           |
+|-------------|---------------|-------------------------------|-------------------------------|--------------------------------|
+| **id** | INTEGER | 🔑 PK, not null , unique, autoincrement |  | |
+| **fk_artist** | INTEGER | not null  |  | |
+| **fk_activity** | INTEGER | not null  |  | |
+| **date** | DATE | not null  |  | |
+| **start_hour** | DATETIME | not null  |  | |
+| **end_hour** | DATETIME | not null  |  | |
+| **type** | BOOLEAN | not null  |  | |
+| **img** | TINYTEXT(65535) | not null  |  | |
+| **is_major** | BOOLEAN | not null  |  | | 
+
+
+#### Indexes
+| Name | Unique | Fields |
+|------|--------|--------|
+| events_index_0 |  |  |
+## Relationships
+
+
+## Database Diagram
+
+```mermaid
+erDiagram
+	User {
+		INTEGER id
+		VARCHAR(255) first_name
+		VARCHAR(255) last_name
+		DATE birth_date
+		SMALLINT ROLES
+	}
+
+	events {
+		INTEGER id
+		INTEGER fk_artist
+		INTEGER fk_activity
+		DATE date
+		DATETIME start_hour
+		DATETIME end_hour
+		BOOLEAN type
+		TINYTEXT(65535) img
+		BOOLEAN is_major
+	}
+```
 
 
 ## Design
