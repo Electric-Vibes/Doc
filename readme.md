@@ -124,6 +124,10 @@ Que vous soyez végétarien, végan ou simplement curieux d’essayer une altern
 
 ### User
 
+- Les utilisateurs peuvent être soit admin soit user;
+- Les administrateurs auront accès à la possibilité du back office
+- Les utilisateurs pourront consulter les ressources
+
 | Name        | Type          | Settings                      | References                    | Note                           |
 |-------------|---------------|-------------------------------|-------------------------------|--------------------------------|
 | **id** | INTEGER | 🔑 PK, not null , unique, autoincrement |  | |
@@ -132,32 +136,21 @@ Que vous soyez végétarien, végan ou simplement curieux d’essayer une altern
 | **birth_date** | DATE | not null  |  | |
 | **ROLES** | SMALLINT | not null  |  | | 
 
-
-#### Indexes
-| Name | Unique | Fields |
-|------|--------|--------|
-| User_index_0 |  |  |
-| User_index_1 |  |  |
 ### events
+- Les évènements peuvent soit correspondre à un concert d'un artiste, soit à une activité (clef booléen)
+- On leur atribu une date
+- Une heure de début
+- Une heure de fin
 
 | Name        | Type          | Settings                      | References                    | Note                           |
 |-------------|---------------|-------------------------------|-------------------------------|--------------------------------|
 | **id** | INTEGER | 🔑 PK, not null , unique, autoincrement |  | |
-| **fk_artist** | INTEGER | not null  |  | |
-| **fk_activity** | INTEGER | not null  |  | |
 | **date** | DATE | not null  |  | |
 | **start_hour** | DATETIME | not null  |  | |
 | **end_hour** | DATETIME | not null  |  | |
 | **type** | BOOLEAN | not null  |  | |
 | **img** | TINYTEXT(65535) | not null  |  | |
 | **is_major** | BOOLEAN | not null  |  | | 
-
-
-#### Indexes
-| Name | Unique | Fields |
-|------|--------|--------|
-| events_index_0 |  |  |
-## Relationships
 
 
 ## Database Diagram
