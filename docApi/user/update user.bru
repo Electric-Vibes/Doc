@@ -1,0 +1,22 @@
+meta {
+  name: update user
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{server}}{{user}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "id": 1,
+    "firstName" : "prenom update",  
+    "lastName" : "nom update",
+    "birthDate" : "1993T00:00:00.000Z",
+    "role": "utilisateur"
+  
+  }
+}
