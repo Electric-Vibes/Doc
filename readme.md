@@ -104,8 +104,6 @@ Que vous soyez végétarien, végan ou simplement curieux d’essayer une altern
  
 
 ## Schéma et base de données 
- Untitled Diagram documentation
-## Summary
 
 - [Introduction](#introduction)
 - [Database Type](#database-type)
@@ -115,11 +113,9 @@ Que vous soyez végétarien, végan ou simplement curieux d’essayer une altern
 - [Relationships](#relationships)
 - [Database Diagram](#database-Diagram)
 
-## Introduction
-
 ## Database type
 
-- **Database system:** MariaDB
+- **Database system:** MySql
 ## Table structure
 
 ### User
@@ -167,8 +163,6 @@ erDiagram
 
 	events {
 		INTEGER id
-		INTEGER fk_artist
-		INTEGER fk_activity
 		DATE date
 		DATETIME start_hour
 		DATETIME end_hour
