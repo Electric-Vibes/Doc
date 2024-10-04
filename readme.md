@@ -154,7 +154,7 @@ erDiagram
 
 
 ## Design
-Image de la maquette figma : 
+
 ![Texte alternatif](img/image.png)
 ![Texte alternatif](img/image_2.png)
 ![Texte alternatif](img/image_3.png)
