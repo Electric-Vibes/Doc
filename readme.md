@@ -154,7 +154,13 @@ erDiagram
 
 
 ## Design
-TODO
+Image de la maquette figma : 
+![Texte alternatif](img/image.png)
+![Texte alternatif](img/image_2.png)
+![Texte alternatif](img/image_3.png)
+![Texte alternatif](img/image_4.png)
+![Texte alternatif](img/image_5.png)
+
 
 ## Stack 
 Nest JS : Backend
@@ -170,26 +176,4 @@ BDD : Sql MariaDB (Pas sur) -> CRUD assez basique mise en ligne pour évité les
 Map : Leflet : Louis connais bien  la lib
 
 Figma pour la maquette : Outil gratuit, Houda maitrise bien l'outil
-
-
-## Page 
-### Page d'accueil
-#### Présentation 
-### Liste des eventment
-#### filtre 
-#### data , catégoeir, genre
-
-### Détail d'un event
-#### Date , horraire, description, artiste, Option de rappel
-### Page carte intéractive
-#### Visualisation des lieux clef
-
-
-## Outil de gestion de projet
-### Livrable en readme
-### Outil de versionning github
-#### Une orga avec une partie back et une front
-
-### 
-
 
