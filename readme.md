@@ -108,7 +108,6 @@ Que vous soyez végétarien, végan ou simplement curieux d’essayer une altern
 - [Introduction](#introduction)
 - [Database Type](#database-type)
 - [Table Structure](#table-structure)
-	- [User](#User)
 	- [events](#events)
 - [Relationships](#relationships)
 - [Database Diagram](#database-Diagram)
@@ -118,25 +117,7 @@ Que vous soyez végétarien, végan ou simplement curieux d’essayer une altern
 - **Database system:** MySql
 ## Table structure
 
-### User
-
-- Les utilisateurs peuvent être soit admin soit user;
-- Les administrateurs auront accès à la possibilité du back office
-- Les utilisateurs pourront consulter les ressources
-
-| Name        | Type          | Settings                      | References                    | Note                           |
-|-------------|---------------|-------------------------------|-------------------------------|--------------------------------|
-| **id** | INTEGER | 🔑 PK, not null , unique, autoincrement |  | |
-| **first_name** | VARCHAR(255) | not null  |  | |
-| **last_name** | VARCHAR(255) | not null  |  | |
-| **birth_date** | DATE | not null  |  | |
-| **ROLES** | SMALLINT | not null  |  | | 
-
 ### events
-- Les évènements peuvent soit correspondre à un concert d'un artiste, soit à une activité (clef booléen)
-- On leur atribu une date
-- Une heure de début
-- Une heure de fin
 
 | Name        | Type          | Settings                      | References                    | Note                           |
 |-------------|---------------|-------------------------------|-------------------------------|--------------------------------|
@@ -144,31 +125,30 @@ Que vous soyez végétarien, végan ou simplement curieux d’essayer une altern
 | **date** | DATE | not null  |  | |
 | **start_hour** | DATETIME | not null  |  | |
 | **end_hour** | DATETIME | not null  |  | |
-| **type** | BOOLEAN | not null  |  | |
+| **type** | ENUM | not null  |  | |
 | **img** | TINYTEXT(65535) | not null  |  | |
-| **is_major** | BOOLEAN | not null  |  | | 
+| **category** | ENUM | not null  |  | |
+| **localisation** | INTEGER | not null  |  | |
+| **musicalGenre** | ENUM | not null  |  | | 
+
+
+## Relationships
 
 
 ## Database Diagram
 
 ```mermaid
 erDiagram
-	User {
-		INTEGER id
-		VARCHAR(255) first_name
-		VARCHAR(255) last_name
-		DATE birth_date
-		SMALLINT ROLES
-	}
-
 	events {
 		INTEGER id
 		DATE date
 		DATETIME start_hour
 		DATETIME end_hour
-		BOOLEAN type
+		ENUM type
 		TINYTEXT(65535) img
-		BOOLEAN is_major
+		ENUM category
+		INTEGER localisation
+		ENUM musicalGenre
 	}
 ```
 
