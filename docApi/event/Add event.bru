@@ -6,6 +6,16 @@ meta {
 
 post {
   url: {{server}}{{event}}
-  body: none
+  body: json
   auth: none
+}
+
+body:json {
+  {
+    "startDate": "2024-10-03T10:00:00Z",
+    "endDate": "2024-10-03T12:00:00Z",
+    "typeEvent": "activité",
+    "thumbnail": "http://example.com/image.jpg"
+  }
+  
 }

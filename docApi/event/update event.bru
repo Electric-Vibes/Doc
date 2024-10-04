@@ -5,7 +5,15 @@ meta {
 }
 
 put {
-  url: {{server}}{{event}}
-  body: none
+  url: {{server}}{{event}}2
+  body: json
   auth: none
+}
+
+body:json {
+    {
+      "id": "2",
+      "typeEvent": "artiste",
+      "thumbnail": null
+    }
 }
